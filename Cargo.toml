@@ -1,0 +1,26 @@
+[package]
+name = "telex"
+version = "0.1.0"
+edition = "2024"
+description = "Vietnamese Telex input method engine with IBus integration"
+license = "MIT"
+
+[features]
+default = ["ibus"]
+# The IBus front-end; the conversion library itself has no dependencies.
+ibus = ["dep:zbus"]
+
+[dependencies]
+zbus = { version = "5", optional = true, default-features = false, features = ["async-io", "blocking-api"] }
+
+[[bin]]
+name = "telex"
+path = "src/main.rs"
+
+[[bin]]
+name = "ibus-engine-telex"
+path = "src/bin/ibus_engine.rs"
+required-features = ["ibus"]
+
+[profile.release]
+lto = true

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IBus component descriptor. install.sh replaces @EXEC@ with the engine path. -->
+<component>
+  <name>org.freedesktop.IBus.Telex</name>
+  <description>Vietnamese Telex input method</description>
+  <exec>@EXEC@ --ibus</exec>
+  <version>0.1.0</version>
+  <author>telex</author>
+  <license>MIT</license>
+  <homepage>https://github.com/</homepage>
+  <textdomain>telex</textdomain>
+  <engines>
+    <engine>
+      <name>telex</name>
+      <language>vi</language>
+      <license>MIT</license>
+      <author>telex</author>
+      <icon>ibus-keyboard</icon>
+      <layout>us</layout>
+      <longname>Vietnamese (Telex)</longname>
+      <description>Vietnamese Telex input method written in Rust</description>
+      <rank>0</rank>
+      <symbol>vi</symbol>
+    </engine>
+  </engines>
+</component>

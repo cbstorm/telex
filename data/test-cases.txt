@@ -1,0 +1,102 @@
+# Telex regression cases: <input> TAB <expected output>
+# {BS} in the input stands for a Backspace key press.
+# Blank lines and lines starting with # are ignored.
+
+# Required examples
+tieengs	tiếng
+Vieetj	Việt
+ddawng	đăng
+hoafng	hoàng
+xin chaof	xin chào
+Tooi yeeu Saif Gonf	Tôi yêu Sài Gòn
+
+# Basic tones
+as	á
+af	à
+ar	ả
+ax	ã
+aj	ạ
+asz	a
+
+# Vowel modifiers
+aa	â
+aw	ă
+ee	ê
+oo	ô
+ow	ơ
+uw	ư
+dd	đ
+w	ư
+nhw	như
+
+# Tone placement
+hoaf	hòa
+hoaj	họa
+thuyr	thủy
+nguoiwf	người
+dduowcj	được
+dduocwj	được
+muaw	mưa
+quaf	quà
+quyeenf	quyền
+khuyur	khuỷu
+giuwx	giữ
+gif	gì
+hoawcj	hoặc
+ngoaif	ngoài
+khoer	khỏe
+chuyeenj	chuyện
+nghieeng	nghiêng
+tieengs Vieetj	tiếng Việt
+
+# Tone typed before the end of the word
+tieesng	tiếng
+hoafng	hoàng
+Vieejt	Việt
+
+# Changing / removing a tone
+asf	à
+tieengsf	tiềng
+tieengsz	tiêng
+
+# Uppercase
+SAIF GOFN	SÀI GÒN
+DDAWNG	ĐĂNG
+Ddaayf	Đầy
+NGUOWIF	NGƯỜI
+DDi	Đi
+
+# Repeated letters undo the transform
+aaa	aa
+aww	aw
+eee	ee
+ooo	oo
+ddd	dd
+ass	as
+ww	w
+uww	uw
+xooong	xoong
+
+# Punctuation and digits end the word
+chaof, banj!	chào, bạn!
+(Vieetj)	(Việt)
+nawm 2024.	năm 2024.
+
+# English words are left alone
+student	student
+class	class
+where	where
+windows	windows
+string	string
+please	please
+email	email
+
+# Backspace removes the last visible character
+tieengs{BS}	tiến
+tieengs{BS}{BS}	tiế
+tieengs{BS}{BS}{BS}	ti
+tieengs{BS}{BS}{BS}{BS}{BS}{BS}as	á
+hoafng{BS}{BS}	hòa
+ddawng{BS}{BS}	đă
+dduowcj{BS}t	đượt
+tieeng{BS}{BS}nf	tiền

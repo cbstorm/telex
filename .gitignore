@@ -1,0 +1,13 @@
+# Cargo build output
+/target/
+
+# Python bytecode from tests/ibus/client.py
+__pycache__/
+*.py[cod]
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
